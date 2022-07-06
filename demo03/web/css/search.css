@@ -1,0 +1,14 @@
+.m20{
+    width:20%;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:#e9e9e9;
+}
+#tbl_fruit{
+    width:60%;
+    line-height:28px;
+    margin-top:16px;
+    margin-left:20%;
+}
