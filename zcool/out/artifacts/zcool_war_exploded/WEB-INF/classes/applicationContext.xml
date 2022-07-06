@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<beans>
+    <!-- 这个bean标签的作用是 将来servetPath中涉及的名字对应的是picture,那么就要PictureController来处理 -->
+    <bean id="picture" class="com.ckj.controller.PictureController"/>
+</beans>
