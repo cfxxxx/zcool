@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>主页</title>
+        <!-- https://fontawesome.com/v5/search?s=solid%2Cbrands -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
+        <script src="../js/echarts.min.js"></script>
+    </head>
+    <body>
+        <div class="menu-bar">
+            <h1 class="logo">数据<span>展示.</span></h1>
+            <ul>
+                <li><a href="#">根据名称查询</a></li>
+                <li><a href="#">根据主题查询</a></li>
+                <li><a href="#">排名<i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#">按浏览量</a></li>
+                            <li><a href="#">按点赞量</a></li>
+                            <li><a href="#">按综合热度</a></li>
+                        </ul>
+                    </div>
+                 </li>
+            </ul>
+        </div>
+        <div id="test" style="width:600px;height:600px;"></div>
+    </body>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+
+var myChart = echarts.init(document.getElementById("test"));
+
+// 指定图表的配置项和数据
+
+var option = {
+
+xAxis: {
+
+type: 'category',
+
+data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+
+},
+
+yAxis: {
+
+type: 'value'
+
+},
+
+series: [{
+
+data: [120, 200, 150, 80, 70, 110, 130],
+
+type: 'bar'
+
+}]
+
+};
+
+ 
+
+// 使用刚指定的配置项和数据显示图表。
+
+myChart.setOption(option);
+    </script>
+</html>

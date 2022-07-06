@@ -1,0 +1,30 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <link rel="stylesheet" href="../css/degree.css">
+</head>
+<body>
+    <h1>表格</h1>
+    <form action="lable.do" method="post">
+        请输入id：
+        <input type="text" name="id" th:value="${session.id}"/>
+        <input type="submit" value="查询"/>
+    </form>
+    <table id="tbl_fruit">
+            <tr>
+                <th class="m20">id</th>
+                <th class="m20">标题</th>
+                <th class="m20">主题</th>
+                <th class="m20">浏览量</th>
+            </tr>
+            <tr>
+                <td th:text="${session.lable.id}"></td>
+                <td th:text="${session.lable.name}"></td>
+                <td th:text="${session.lable.theme}"></td>
+                <td th:text="${session.lable.view}"></td>
+            </tr>
+    </table>
+</body>
+</html>
