@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>按浏览量排序</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/order.css">
+        <script language="JavaScript" src="js/order.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>主题</th>
+                        <th>评论数</th>
+                        <th>点赞数</th>
+                        <th>浏览量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:unless="${#lists.isEmpty(session.lables)}" th:each="lable:${session.lables}">
+                    <td><a th:text="${lable.name}" th:href="@{lable.do(src=${lable.src},operate=picture)}"></a> </td>
+                    <td th:text="${lable.theme}"></td>
+                    <td th:text="${lable.common}"></td>
+                    <td th:text="${lable.good}"></td>
+                    <td th:text="${lable.view}"></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <a href="index.html">点此处返回主页面</a>
+    </body>
+</html>
