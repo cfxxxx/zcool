@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>主题查询</title>
+        <link rel="stylesheet" href="css/search01.css">
+        <script language="JavaScript" src="js/search01.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li th:unless="${#lists.isEmpty(session.lables)}" th:each="lable:${session.lables}"><a th:text="${lable.theme}" th:onclick="searchInfo([[${lable.theme}]])"></a></li>
+        </ul>
+    </body>
+</html>
